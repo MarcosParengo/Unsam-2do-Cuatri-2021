@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+zip_generator=zip([1,2,3,4,5],[60,70,80,90,100])
+x,y=zip(*zip_generator)
+print(x)
+print(y)
+plt.figure()
+plt.scatter(x[:3],y[:3],s=100,c='red',label='Ingresos más bajos')
+plt.scatter(x[2:],y[2:],s=50,c='green',label='Ingresos más altos')
+#x[:2],y[:2] -> ((1, 2), (60, 70))
+#x[2:],y[2:] -> ((3, 4, 5), (80, 90, 100))
+plt.xlabel('Experiencia en años')
+plt.ylabel('Ingresos obtenidos')
+plt.title('Relación entre experiencia e ingresos')
+plt.legend(loc=4,frameon=False)
+
+plt.show()
